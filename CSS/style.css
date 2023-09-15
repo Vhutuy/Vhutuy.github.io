@@ -1,9 +1,10 @@
 
 body {
     margin: 0;
-    height: 180vh;
+    max-height: 120vh;
     background: #000;
-
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 div {
