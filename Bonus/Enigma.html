@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            height: 110vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        #frase {
+            position: absolute;
+            top: 40px;
+            width: 90vw;
+        }
+
+        #resposta {
+            width: 70vw;
+            height: 5vh;
+            font-size: 40px;
+            text-align: center;
+            border: none;
+            border-radius: 20px;
+            text-decoration: none;
+            position: absolute;
+            top: 200px;
+        }
+        
+
+        #butao {
+            width: 10vw;
+            height: 5vh;
+            font-size: 35px;
+            text-align: center;
+            border: none;
+            border-radius: 20px;
+            transition: 1s;
+            text-decoration: none;
+            position: absolute;
+            top: 260px;
+        }
+        #butao:hover {
+            width: 12vw;
+            height: 7vh;
+            background-color: #02432F;
+            color: white;
+        }
+
+        #letras {
+            width: 65vw;
+            height: 65vh;
+            position: absolute;
+            bottom: -5px;
+        }   
+
+        #casoacerte{
+            color: white;
+            position: absolute;
+            font-size: 100px;
+            top: 10px;
+            display: none;
+        }
+        #deoio {
+            display: none;
+        }
+    </style>
+    <script>
+        function xau() {
+            var resp = document.getElementById("resposta").value;
+            if (resp.toUpperCase() == "ELES TAO DE OIO EM NOIS") {
+                document.getElementById("frase").style.display = "none";
+                document.getElementById("resposta").style.display = "none";
+                document.getElementById("butao").style.display = "none";
+                document.getElementById("letras").style.display = "none";
+                document.getElementById("letras").style.display = "none";
+
+                document.getElementById("casoacerte").style.display = "flex";
+                document.getElementById("deoio").style.display = "flex";
+
+            } else {
+                alert("Incorreto!")
+            }
+            
+        }
+    </script>
+</head>
+<body bgcolor="black">
+    
+        <img id="frase" src="../Imagens/eles tao de oio.png" alt="">
+
+        <input type="text" id="resposta"> <br> <br>
+        <input type="button" value="Tentar" id="butao" onclick="xau()">
+        <img src="../Imagens/letras.png" alt="" id="letras">
+
+        <img src="../Imagens/fd31e4cecb11a2c11faf78f84250dc9693048ae581432ba4836e33007394b062_1.jpg" alt="" id="deoio">
+
+        <h1 id="casoacerte">Eles tao de oio em nois!</h1>
+    
+
+
+    
+</body>
+</html>
